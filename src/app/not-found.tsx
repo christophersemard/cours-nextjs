@@ -1,8 +1,11 @@
 "use client";
 
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
 import Link from "next/link";
-import anim404 from './404.json'
+import animation from "../../public/404.json";
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 export default function NotFoundPage() {
 
@@ -14,9 +17,9 @@ export default function NotFoundPage() {
     return (
         <div className="min-h-[60vh] flex flex-col items-center justify-center text-center space-y-6">
             <Lottie
-                animationData={anim404}
-                style={style}
+                animationData={animation}
                 loop={true}
+                style={style}
             />
             <h2 className="text-2xl font-bold">Oups, cette page n’existe pas</h2>
             <p className="text-secondary">

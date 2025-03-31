@@ -1,3 +1,11 @@
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Contact",
+    description: "Contactez-nous pour toute question ou collaboration.",
+};
+
 export default function ContactPage() {
     return (
         <section className="space-y-6 max-w-2xl">

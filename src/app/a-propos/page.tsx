@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "À propos",
+    description: "À propos du projet étudiant Next.js",
+};
+
 export default function AboutPage() {
     return (
         <section className="space-y-8">
