@@ -20,6 +20,9 @@ export async function submitContactForm(formData: FormData) {
         message: formData.get("message"),
     };
 
+    // Attendre 3 secondes avant de valider le formulaire
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
     const result = contactSchema.safeParse(data);
 
     if (!result.success) {

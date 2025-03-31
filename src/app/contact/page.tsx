@@ -1,7 +1,7 @@
 "use client";
 
 import { submitContactForm } from "./actions";
-import { useState, useTransition, useRef } from "react";
+import { useState, useRef } from "react";
 import toast from "react-hot-toast";
 
 export default function ContactPage() {
@@ -9,7 +9,6 @@ export default function ContactPage() {
 
     const [errors, setErrors] = useState<Record<string, string[]>>({});
     const [success, setSuccess] = useState(false);
-    const [isPending, startTransition] = useTransition();
     const [loading, setLoading] = useState(false);
 
     type ValidationError = {
@@ -23,41 +22,31 @@ export default function ContactPage() {
 
     const handleSubmit = (formData: FormData) => {
 
-        startTransition(() => {
-            setLoading(true);
-            toast.promise(
-                submitContactForm(formData).then((response: Response) => {
+        setLoading(true);
+        toast.promise(
+            submitContactForm(formData).then((response: Response) => {
 
-                    if ("validation" in response && response.validation) {
-                        setErrors(response.errors || {});
-                        setSuccess(false);
+                if ("validation" in response && response.validation) {
 
-                        return new Promise((_, reject) =>
-                            setTimeout(() => {
-                                setLoading(false);
-                                reject(new Error("Erreur de validation."));
-                            }, 2000)
-                        );
-                    }
-
-                    if ("success" in response && response.success) {
-                        return new Promise((resolve) =>
-                            setTimeout(() => {
-                                setErrors({});
-                                setSuccess(true);
-                                setLoading(false);
-                                resolve(true);
-                            }, 2000)
-                        );
-                    }
-                }),
-                {
-                    loading: "Envoi du message...",
-                    success: <b>Message envoyé avec succès !</b>,
-                    error: <b>Impossible d’envoyer le message.</b>,
+                    setErrors(response.errors || {});
+                    setSuccess(false);
+                    setLoading(false);
+                    throw new Error("Erreur de validation.");
                 }
-            );
-        });
+
+                if ("success" in response && response.success) {
+                    setErrors({});
+                    setSuccess(true);
+                    setLoading(false);
+                    return response;
+                }
+            }),
+            {
+                loading: "Envoi du message...",
+                success: <b>Message envoyé avec succès !</b>,
+                error: <b>Impossible d’envoyer le message.</b>,
+            }
+        );
     };
 
     const fillInvalidData = () => {
