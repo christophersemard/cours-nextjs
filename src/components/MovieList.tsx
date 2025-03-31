@@ -12,7 +12,7 @@ export default function MovieList({ movies }: { movies: Movie[] }) {
     return (
         <ul className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
             {movies.map((movie: Movie) => (
-                <li key={movie.id} className="rounded-xl shadow-sm bg-background border border-accent-muted overflow-hidden">
+                <li key={movie.id} className="rounded-xl shadow-sm bg-accent-muted border border-primary overflow-hidden">
                     <Image
                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                         alt={movie.title}

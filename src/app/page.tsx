@@ -20,13 +20,13 @@ export default function HomePage() {
       <div className="bg-accent-muted rounded-xl p-16 flex justify-between gap-32 items-center">
         <div className="flex-1">
           <h3 className="text-2xl font-semibold text-accent mb-4">Une application moderne et efficace</h3>
-          <p className="text-primary">
+          <p className="text-secondary">
             Ce projet met en avant les dernières technologies du web : Next.js 15 pour une navigation rapide, TypeScript pour un code fiable, et TailwindCSS pour un style sur mesure.
           </p>
-          <p className="text-primary mt-4">
+          <p className="text-secondary mt-4">
             Nous avons intégré des appels à des APIs en temps réel afin de présenter les <strong>films les plus récents</strong> ainsi que les <strong>meilleurs films selon la critique</strong>.
           </p>
-          <p className="text-primary mt-4">
+          <p className="text-secondary mt-4">
             Explorez ces deux pages pour voir notre intégration dynamique des données :
           </p>
           <div className="mt-6 flex gap-4">

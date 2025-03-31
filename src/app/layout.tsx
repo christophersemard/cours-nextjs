@@ -16,17 +16,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <header className="bg-accent-muted shadow-sm">
           <nav className="container mx-auto px-4 py-5 flex justify-between items-center">
             <Link href="/" className="flex items-center gap-2">
-              <h1 className="text-2xl font-bold tracking-wide text-accent">
+              <h1 className="text-2xl font-bold tracking-wide text-white">
                 Projet Étudiant
               </h1>
             </Link>
-            <ul className="flex gap-4 text-sm font-medium text-primary">
+            <ul className="flex gap-4 text-sm font-medium text-secondary">
 
-              <li>
-                <Link href="/" className="hover:text-accent transition-colors px-2">
-                  Accueil
-                </Link>
-              </li>
               <li>
                 <Link href="/a-propos" className="hover:text-accent transition-colors px-2">
                   À propos
@@ -50,7 +45,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <li>
                 <Link
                   href="/meilleurs-films"
-                  className="px-4 py-2 rounded-full border border-accent text-accent hover:bg-accent hover:text-white transition font-medium"
+                  className="px-4 py-2 rounded-full bg-accent text-white hover:opacity-90 transition font-medium"
                 >
                   Meilleurs films
                 </Link>
