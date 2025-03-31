@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="fr">
-      <body className="bg-background text-foreground font-sans">
-        <header className="bg-accent-muted shadow-sm border-b border-accent">
+      <body className="bg-background text-foreground font-sans shadow">
+        <header className="bg-accent-muted shadow-sm">
           <nav className="container mx-auto px-4 py-5 flex justify-between items-center">
             <Link href="/" className="flex items-center gap-2">
               <h1 className="text-2xl font-bold tracking-wide text-accent">

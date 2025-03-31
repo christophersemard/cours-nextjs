@@ -7,8 +7,8 @@
 
     --primary: #2c2c2c;
     --secondary: #6e6e6e;
-    --accent: #ba5a31;
-    --accent-muted: #ffe8d6;
+    --accent: #ffbb00;
+    --accent-muted: #fff4d6;
 
     --font-sans: "Segoe UI", sans-serif;
     --font-mono: "Fira Code", monospace;
@@ -33,8 +33,8 @@
 
         --primary: #f0f0f0;
         --secondary: #a1a1a1;
-        --accent: #ff7849;
-        --accent-muted: #291e1e;
+        --accent: #ff7700;
+        --accent-muted: #1e1a0d;
     }
 }
 
