@@ -15,6 +15,20 @@ export default function HomePage() {
         <p className="text-secondary text-lg">
           Ce site a été conçu dans le cadre d’un exercice encadré avec les technologies modernes de développement web : Next.js 15, TailwindCSS 4, TypeScript et bien plus encore.
         </p>
+        <div className="mt-6 flex gap-4">
+          <Link
+            href="/inscription"
+            className="px-6 py-2 rounded-full bg-accent text-white hover:opacity-90 transition font-medium"
+          >
+            Inscription
+          </Link>
+          <Link
+            href="/connexion"
+            className="px-6 py-2 rounded-full border border-accent text-accent hover:bg-accent hover:text-white transition font-medium"
+          >
+            Connexion
+          </Link>
+        </div>
       </div>
 
       <div className="bg-accent-muted rounded-xl p-16 flex justify-between gap-32 items-center">

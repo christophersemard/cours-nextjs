@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projet Next.js – Suivi des Exercices
 
-## Getting Started
+Projet étudiant réalisé avec **Next.js 15**, **TailwindCSS 4**, **TypeScript strict**, **Prisma**, et **Supabase**.  
+Ce dépôt respecte l’ensemble des consignes d’un projet structuré, accessible et moderne.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Partie 1 – Frontend
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Étape | Description | Fait | Commentaire |
+|-------|-------------|------|-------------|
+| 1 | Initialisation du projet avec Tailwind, TypeScript, ESLint, App Router, GitHub Actions | ✅ | Tout est fonctionnel dès le démarrage |
+| 2 | Navbar commune + pages “Accueil”, “À propos”, “Contact” | ✅ | Navbar centralisée dans le layout |
+| 3 | Image optimisée + page 404 personnalisée (Lottie) | ✅ | Animation Lottie bien intégrée |
+| 4 | Appels API côté serveur (`/meilleurs-films`) et client (`/films-recents`) | ✅ | `Suspense` + `use()` bien utilisés avec animation de loading |
+| 5 | Formulaire de contact avec Zod + toasts dynamiques | ✅ | Pré-remplissage, erreurs par champ, UX propre |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Partie 2 – Backend / Auth / Admin
 
-## Learn More
+| Étape | Description | Fait | Commentaire |
+|-------|-------------|------|-------------|
+| 1 | Connexion à Supabase, table `articles`, pages `/blog` et `/blog/[id]` avec `revalidate` | ✅ | Fonctionne parfaitement en build et sur Vercel |
+| 2 | Déploiement Vercel + Preview Deployments | ✅ | Variables sécurisées + pool Supabase configuré |
+| 3 | Authentification sans Auth0 (`users`, cookies, etc.) | ✅ | Tout est fait + gestion du context |
+| 4 | Admin CRUD (création, édition d'article + invalidation de cache) | ⬜ Non fait | À venir une fois l’auth terminée |
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
