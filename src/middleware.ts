@@ -13,7 +13,11 @@ export async function middleware(request: NextRequest) {
         return NextResponse.next();
     }
 
+    console.log("Middleware triggered for protected route:", pathname);
+    // Vérification du cookie d'authentification
+
     const token = request.cookies.get(COOKIE_NAME)?.value;
+    console.log("Token:", token);
 
     if (!token) {
         const url = request.nextUrl.clone();
@@ -23,6 +27,7 @@ export async function middleware(request: NextRequest) {
 
     try {
         await jwtVerify(token, secret); // token valide, on continue
+        console.log("Token is valid.");
         return NextResponse.next();
     } catch {
         const url = request.nextUrl.clone();
