@@ -20,16 +20,20 @@ export async function middleware(request: NextRequest) {
     console.log("Token:", token);
 
     if (!token) {
+        console.log("Il y a eu une erreur.");
         const url = request.nextUrl.clone();
         url.pathname = "/connexion";
         return NextResponse.redirect(url);
     }
 
     try {
+        console.log("Vérification du token ...");
         await jwtVerify(token, secret); // token valide, on continue
         console.log("Token is valid.");
         return NextResponse.next();
-    } catch {
+    } catch (error) {
+        console.log("Il y a eu une erreur.");
+        console.error(error);
         const url = request.nextUrl.clone();
         url.pathname = "/connexion";
         return NextResponse.redirect(url);
