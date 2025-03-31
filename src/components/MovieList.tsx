@@ -10,7 +10,7 @@ type Movie = {
 
 export default function MovieList({ movies }: { movies: Movie[] }) {
     return (
-        <ul className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <ul className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
             {movies.map((movie: Movie) => (
                 <li key={movie.id} className="rounded-xl shadow-sm bg-accent-muted border border-primary overflow-hidden">
                     <Image
@@ -18,7 +18,7 @@ export default function MovieList({ movies }: { movies: Movie[] }) {
                         alt={movie.title}
                         width={200}
                         height={300}
-                        className="w-full max-h-96"
+                        className="w-full max-h-96 "
                     />
                     <div className="p-4">
                         <h3 className="text-xl font-semibold text-accent">{movie.title}</h3>

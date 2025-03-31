@@ -70,7 +70,7 @@ export default function ContactPage() {
     };
 
     return (
-        <section className="space-y-10">
+        <section className="max-w-7xl mx-auto space-y-10">
             <div className="max-w-3xl">
                 <h2 className="text-4xl font-bold mb-4">Une question ? Un message ?</h2>
                 <p className="text-secondary text-lg">

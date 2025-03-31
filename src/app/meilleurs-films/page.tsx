@@ -27,8 +27,8 @@ export default async function PopularMoviesPage() {
     const movies = data.results
 
     return (
-        <section className="space-y-8">
-            <h2 className="text-3xl font-bold">Films populaires (chargement côté serveur)</h2>
+        <section className="max-w-7xl mx-auto space-y-8">
+            <h2 className="text-4xl font-bold">Films populaires (chargement côté serveur)</h2>
 
             <MovieList movies={movies} />
         </section>

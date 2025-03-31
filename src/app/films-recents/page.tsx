@@ -22,8 +22,8 @@ export default function FilmsClientPage() {
     const moviesPromise = fetchMovies();
 
     return (
-        <section className="space-y-8">
-            <h2 className="text-3xl font-bold">Films actuellement en salle (rendu client)</h2>
+        <section className="max-w-7xl mx-auto space-y-8">
+            <h2 className="text-4xl font-bold">Films actuellement en salle (rendu client)</h2>
 
             <Suspense
                 fallback={
