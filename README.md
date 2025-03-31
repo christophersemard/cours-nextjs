@@ -1,8 +1,5 @@
 # Projet Next.js – Suivi des Exercices
 
-Projet étudiant réalisé avec **Next.js 15**, **TailwindCSS 4**, **TypeScript strict**, **Prisma**, et **Supabase**.  
-Ce dépôt respecte l’ensemble des consignes d’un projet structuré, accessible et moderne.
-
 Voici le lien de déploiement : https://cours-nextjs-git-master-christophersemards-projects.vercel.app/
 
 ---
