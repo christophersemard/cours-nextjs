@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Cours NextJS",
@@ -58,6 +59,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </nav>
         </header>
         <main className="container mx-auto px-4 py-12">{children}</main>
+
+        <Toaster position="top-center" />
       </body>
     </html>
   );
