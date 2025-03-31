@@ -11,7 +11,8 @@ export default function HomePage() {
   return (
     <section className="space-y-10 max-w-7xl mx-auto">
       <div className="max-w-3xl">
-        <h2 className="text-4xl font-bold mb-4">Bienvenue sur notre projet Next.js</h2>
+        <h2 className="text-4xl font-bold mb-4">
+          Bienvenue sur notre projet Next.js (version Preview)</h2>
         <p className="text-secondary text-lg">
           Ce site a été conçu dans le cadre d’un exercice encadré avec les technologies modernes de développement web : Next.js 15, TailwindCSS 4, TypeScript et bien plus encore.
         </p>

@@ -7,7 +7,7 @@
 
     --primary: #2c2c2c;
     --secondary: #6e6e6e;
-    --accent: #ffbb00;
+    --accent: #00e5ff;
     --accent-muted: #fff4d6;
 
     --font-sans: "Segoe UI", sans-serif;
@@ -33,7 +33,7 @@
 
         --primary: #2c2c2c;
         --secondary: #cacaca;
-        --accent: #ff7700;
+        --accent: #00e5ff;
         --accent-muted: #090909;
     }
 }
