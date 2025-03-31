@@ -15,6 +15,7 @@ export default function HomePage() {
         <p className="text-secondary text-lg">
           Ce site a été conçu dans le cadre d’un exercice encadré avec les technologies modernes de développement web : Next.js 15, TailwindCSS 4, TypeScript et bien plus encore.
         </p>
+
         <div className="mt-6 flex gap-4">
           <Link
             href="/inscription"
@@ -24,9 +25,15 @@ export default function HomePage() {
           </Link>
           <Link
             href="/connexion"
-            className="px-6 py-2 rounded-full border border-accent text-accent hover:bg-accent hover:text-white transition font-medium"
+            className="px-6 py-2 rounded-full border border-accent text-white hover:bg-accent hover:text-white transition font-medium"
           >
             Connexion
+          </Link>
+          <Link
+            href="/admin"
+            className="px-6 py-2 rounded-full bg-accent text-white hover:opacity-90 transition font-medium"
+          >
+            Accéder à la partie admin
           </Link>
         </div>
       </div>
@@ -52,7 +59,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/meilleurs-films"
-              className="px-6 py-2 rounded-full border border-accent text-accent hover:bg-accent hover:text-white transition font-medium"
+              className="px-6 py-2 rounded-full border border-accent text-white hover:bg-accent hover:text-white transition font-medium"
             >
               Meilleurs films (rendu côté serveur)
             </Link>

@@ -3,6 +3,8 @@
 Projet étudiant réalisé avec **Next.js 15**, **TailwindCSS 4**, **TypeScript strict**, **Prisma**, et **Supabase**.  
 Ce dépôt respecte l’ensemble des consignes d’un projet structuré, accessible et moderne.
 
+Voici le lien de déploiement : https://cours-nextjs-git-master-christophersemards-projects.vercel.app/
+
 ---
 
 ## Partie 1 – Frontend
@@ -24,6 +26,6 @@ Ce dépôt respecte l’ensemble des consignes d’un projet structuré, accessi
 | 1 | Connexion à Supabase, table `articles`, pages `/blog` et `/blog/[id]` avec `revalidate` | ✅ | Fonctionne parfaitement en build et sur Vercel |
 | 2 | Déploiement Vercel + Preview Deployments | ✅ | Variables sécurisées + pool Supabase configuré |
 | 3 | Authentification sans Auth0 (`users`, cookies, etc.) | ✅ | Tout est fait + gestion du context |
-| 4 | Admin CRUD (création, édition d'article + invalidation de cache) | ⬜ Non fait | À venir une fois l’auth terminée |
+| 4 | Admin CRUD (création, édition d'article + invalidation de cache) | ✅ |  |
 
 ---

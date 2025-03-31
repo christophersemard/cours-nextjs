@@ -6,7 +6,9 @@ import { NextRequest } from "next/server";
 import { SignJWT, jwtVerify } from "jose";
 
 const COOKIE_NAME = "auth_user";
-const secret = new TextEncoder().encode(process.env.AUTH_SECRET);
+const secret = new TextEncoder().encode(
+    process.env.AUTH_SECRET || "jwt_tres_tres_tres_secret"
+);
 
 export async function setUserCookie(userId: number, username: string) {
     const token = await new SignJWT({ userId, username })

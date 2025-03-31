@@ -30,7 +30,7 @@ export default function AuthButtons() {
                 </Link>
                 <Link
                     href="/connexion"
-                    className="px-4 py-2 rounded-full border border-accent text-accent hover:bg-accent hover:text-white transition font-medium"
+                    className="px-4 py-2 rounded-full border border-accent text-white hover:bg-accent hover:text-white transition font-medium"
                 >
                     Connexion
                 </Link>
