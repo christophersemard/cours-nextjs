@@ -7,6 +7,7 @@ import ArticleManager from '@/components/ArticleManager';
 
 export default async function AdminPage() {
     const user = await getUserFromCookie();
+    console.log("USER DANS ADMIN", user);
     if (!user) redirect('/connexion');
 
     const articles = await prisma.articles.findMany({ orderBy: { id: 'desc' } });
